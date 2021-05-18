@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.jahaziel.cliente.model.Departamento;
 import com.jahaziel.cliente.model.Empleado;
 import com.jahaziel.cliente.utils.Api;
 import com.jahaziel.cliente.utils.EmpleadoService;
@@ -17,6 +18,7 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -28,51 +30,28 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    EmpleadoService empleadoService;
-    List<Empleado> listaEmpleados = new ArrayList<>();
-    ListView listView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        listView = (ListView) findViewById(R.id.listView);
 
-        listarEmpleados();
+        Button btoEmpleado = (Button) findViewById(R.id.btoEmpleado);
+        Button btoDepartamento =(Button)findViewById(R.id.btoDepartamento);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        btoEmpleado.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,EmpleadoActivity.class);
-                intent.putExtra("ID","");
-                intent.putExtra("NOMBRE","");
-                intent.putExtra("TELEFONO","");
-                intent.putExtra("CORREO","");
-                intent.putExtra("DIRECCION","");
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,ContentEmpleado.class);
                 startActivity(intent);
             }
         });
-    }
 
-    public void listarEmpleados(){
-        empleadoService = Api.getEmpleadoService();
-        Call<List<Empleado>> call = empleadoService.getEmpleados();
-        call.enqueue(new Callback<List<Empleado>>() {
+        btoDepartamento.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(Call<List<Empleado>> call, Response<List<Empleado>> response) {
-                if(response.isSuccessful()){
-                    listaEmpleados = response.body();
-                    listView.setAdapter(new EmpleadoAdapter(MainActivity.this,R.layout.content_main,listaEmpleados));
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Empleado>> call, Throwable t) {
-                Log.e("Error",t.getMessage());
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,ContentDepartamento.class);
+                startActivity(intent);
             }
         });
     }

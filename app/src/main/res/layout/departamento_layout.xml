@@ -8,10 +8,10 @@
     tools:context=".EmpleadoActivity">
 
     <TextView
-        android:id="@+id/Id"
+        android:id="@+id/IdD"
         android:layout_width="65dp"
         android:layout_height="40dp"
-        android:text="@string/txt_Id"
+        android:text="@string/txt_IdD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,13 +19,13 @@
         app:layout_constraintVertical_bias="0.092" />
 
     <EditText
-        android:id="@+id/txtId"
+        android:id="@+id/txtIdD"
         android:layout_width="409dp"
         android:layout_height="50dp"
-        android:autofillHints="@string/txtId"
+        android:autofillHints="@string/txtIdD"
         android:enabled="false"
         android:inputType="text"
-        android:labelFor="@id/txtId"
+        android:labelFor="@id/txtIdD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,10 +33,10 @@
         app:layout_constraintVertical_bias="0.152" />
 
     <TextView
-        android:id="@+id/Nombre"
+        android:id="@+id/NombreD"
         android:layout_width="65dp"
         android:layout_height="40dp"
-        android:text="@string/txt_Nombre"
+        android:text="@string/txt_NombreD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,12 +44,12 @@
         app:layout_constraintVertical_bias="0.222" />
 
     <EditText
-        android:id="@+id/txtNombre"
+        android:id="@+id/txtNombreD"
         android:layout_width="409dp"
         android:layout_height="50dp"
-        android:autofillHints="@string/txtNombre"
+        android:autofillHints="@string/txtNombreD"
         android:inputType="text"
-        android:labelFor="@id/txtNombre"
+        android:labelFor="@id/txtNombreD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,10 +57,10 @@
         app:layout_constraintVertical_bias="0.284" />
 
     <TextView
-        android:id="@+id/Telefono"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:text="@string/txt_Telefono"
+        android:id="@+id/DescripcionD"
+        android:layout_width="84dp"
+        android:layout_height="39dp"
+        android:text="@string/txt_DescripcionD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,71 +68,23 @@
         app:layout_constraintVertical_bias="0.353" />
 
     <EditText
-        android:id="@+id/txtTelefono"
+        android:id="@+id/txtDescripcionD"
         android:layout_width="409dp"
         android:layout_height="50dp"
-        android:autofillHints="@string/txtTelefono"
+        android:autofillHints="@string/txtDescripcionD"
         android:inputType="text"
-        android:labelFor="@id/txtTelefono"
+        android:labelFor="@id/txtDescripcionD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.417" />
 
-    <TextView
-        android:id="@+id/Correo"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:text="@string/txt_Correo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
-
-    <EditText
-        android:id="@+id/txtCorreo"
-        android:layout_width="409dp"
-        android:layout_height="50dp"
-        android:autofillHints="@string/txtCorreo"
-        android:inputType="text"
-        android:labelFor="@id/txtCorreo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.549" />
-
-    <TextView
-        android:id="@+id/Direccion"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:text="@string/txt_Direccion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.613" />
-
-    <EditText
-        android:id="@+id/txtDireccion"
-        android:layout_width="409dp"
-        android:layout_height="50dp"
-        android:autofillHints="@string/txtDireccion"
-        android:inputType="text"
-        android:labelFor="@id/txtDireccion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.681" />
-
     <Button
-        android:id="@+id/btoGuardar"
+        android:id="@+id/btoGuardarD"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:text="@string/bto_Guardar"
+        android:text="@string/bto_GuardarD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.153"
@@ -141,10 +93,10 @@
         app:layout_constraintVertical_bias="0.944" />
 
     <Button
-        android:id="@+id/btoRegresar"
+        android:id="@+id/btoRegresarD"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:text="@string/bto_Regresar"
+        android:text="@string/bto_RegresarD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.869"
@@ -153,14 +105,14 @@
         app:layout_constraintVertical_bias="0.944" />
 
     <Button
-        android:id="@+id/btoEliminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bto_Eliminar"
-        app:layout_constraintBottom_toTopOf="@+id/btoGuardar"
+        android:id="@+id/btoEliminarD"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="@string/bto_EliminarD"
+        app:layout_constraintBottom_toTopOf="@+id/btoGuardarD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDireccion" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcionD" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

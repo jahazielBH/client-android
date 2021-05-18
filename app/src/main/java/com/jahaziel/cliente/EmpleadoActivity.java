@@ -68,18 +68,25 @@ public class EmpleadoActivity extends AppCompatActivity  {
         btoGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Empleado e=new Empleado();
-                e.setNombre(txtNombre.getText().toString());
-                e.setTelefono(txtTelefono.getText().toString());
-                e.setCorreo(txtCorreo.getText().toString());
-                e.setDireccion(txtDireccion.getText().toString());
+                Empleado e;
                 if(id.trim().length()==0||id.equals("")){
+                    e = new Empleado();
+                    e.setNombre(txtNombre.getText().toString());
+                    e.setTelefono(txtTelefono.getText().toString());
+                    e.setCorreo(txtCorreo.getText().toString());
+                    e.setDireccion(txtDireccion.getText().toString());
                     addEmpleado(e);
-                    Intent intent =new Intent(EmpleadoActivity.this,MainActivity.class);
+                    Intent intent =new Intent(EmpleadoActivity.this,ContentEmpleado.class);
                     startActivity(intent);
                 } else {
-                    updateEmpleado(e, Long.valueOf(id));
-                    Intent intent =new Intent(EmpleadoActivity.this,MainActivity.class);
+                    e = new Empleado();
+                    e.setId(Long.valueOf(txtId.getText().toString()));
+                    e.setNombre(txtNombre.getText().toString());
+                    e.setTelefono(txtTelefono.getText().toString());
+                    e.setCorreo(txtCorreo.getText().toString());
+                    e.setDireccion(txtDireccion.getText().toString());
+                    updateEmpleado(e);
+                    Intent intent =new Intent(EmpleadoActivity.this,ContentEmpleado.class);
                     startActivity(intent);
                 }
 
@@ -89,7 +96,7 @@ public class EmpleadoActivity extends AppCompatActivity  {
         btoRegresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(EmpleadoActivity.this,MainActivity.class);
+                Intent intent =new Intent(EmpleadoActivity.this,ContentEmpleado.class);
                 startActivity(intent);
             }
         });
@@ -98,7 +105,7 @@ public class EmpleadoActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 deleteEmpleado(Long.valueOf(id));
-                Intent intent =new Intent(EmpleadoActivity.this,MainActivity.class);
+                Intent intent =new Intent(EmpleadoActivity.this,ContentEmpleado.class);
                 startActivity(intent);
             }
         });
@@ -120,11 +127,11 @@ public class EmpleadoActivity extends AppCompatActivity  {
                 Log.e("Error:",t.getMessage());
             }
         });
-        Intent intent =new Intent(EmpleadoActivity.this,MainActivity.class);
+        Intent intent =new Intent(EmpleadoActivity.this,ContentEmpleado.class);
         startActivity(intent);
     }
 
-    public void updateEmpleado(Empleado e, Long id){
+    public void updateEmpleado(Empleado e){
         empleadoService = Api.getEmpleadoService();
         Call<Empleado> Call = empleadoService.updateEmpleado(e);
         Call.enqueue(new Callback<Empleado>() {
@@ -140,7 +147,7 @@ public class EmpleadoActivity extends AppCompatActivity  {
                 Log.e("Error:",t.getMessage());
             }
         });
-        Intent intent =new Intent(EmpleadoActivity.this,MainActivity.class);
+        Intent intent =new Intent(EmpleadoActivity.this,ContentEmpleado.class);
         startActivity(intent);
     }
 
@@ -160,7 +167,7 @@ public class EmpleadoActivity extends AppCompatActivity  {
                 Log.e("Error:",t.getMessage());
             }
         });
-        Intent intent =new Intent(EmpleadoActivity.this,MainActivity.class);
+        Intent intent =new Intent(EmpleadoActivity.this,ContentEmpleado.class);
         startActivity(intent);
     }
 }

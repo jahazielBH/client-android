@@ -22,11 +22,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EmpleadoActivity"
-            android:label="Nuevo Empleado">
+            android:name=".ContentEmpleado"
+            android:label="Empleados">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"
+                />
+        </activity>
+        <activity
+            android:name=".EmpleadoActivity"
+            android:label="Empleados">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ContentEmpleado"
+                />
+        </activity>
+        <activity
+            android:name=".ContentDepartamento"
+            android:label="Departamentos">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"
+                />
+        </activity>
+        <activity
+            android:name=".DepartamentoActivity"
+            android:label="Departamentos">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ContentDepartamento"
                 />
         </activity>
     </application>

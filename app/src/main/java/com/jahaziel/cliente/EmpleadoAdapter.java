@@ -36,7 +36,7 @@ public class EmpleadoAdapter extends ArrayAdapter<Empleado> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater layoutInflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView=layoutInflater.inflate(R.layout.content_main,parent,false);
+        View rowView=layoutInflater.inflate(R.layout.content_empleado,parent,false);
 
         TextView txtId = (TextView)rowView.findViewById(R.id.ID);
         TextView txtNombre = (TextView)rowView.findViewById(R.id.NOMBRE);

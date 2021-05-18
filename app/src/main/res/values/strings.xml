@@ -13,6 +13,7 @@
     <!-- Titulos -->
     <string name="title_RegistrarEmpleado">Registrar Empleado</string>
     <string name="title_RegistrarDepartamento">Registrar Departamento</string>
+    <string name="title_Crud">CRUD</string>
 
     <!-- Atributos -->
     <string name="txt_Id">ID</string>
@@ -33,6 +34,9 @@
     <string name="bto_GuardarD">Guardar</string>
     <string name="bto_RegresarD">Regresar</string>
     <string name="bto_EliminarD">Eliminar</string>
+
+    <string name="bto_Empleado">Empleado</string>
+    <string name="bto_Departamento">Departamento</string>
 
     <!-- Entradas -->
     <string name="txtId">Ingresar ID</string>
